@@ -57,7 +57,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 ## 🚀 **Instalação** 
 1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
 
-2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de variáveis de ambiente a seguir:
+2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
 
     SERVER_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
     AUTH_SECRET (segredo da autenticação por algorítmo md5)
@@ -80,7 +80,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
     DB_***_USER (nome do usuário do banco de dados)
     DB_***_PASSWORD (senha do usuário)
 
-3 - Usando como modelo o arquivo **src/config/config.example.json** criar na mesma pasta um arquivo **config.json** e definir o restante dos campos (semelhantes aos acima) para cada configuração de conexão ao banco de dados: 
+3 - Usando como modelo o arquivo **src/config/config.example.json** criar na mesma pasta um arquivo **config.json** e definir o restante dos campos (semelhantes aos acima) para cada **configuração de conexão ao banco de dados**: 
     
     username
     password
@@ -89,15 +89,46 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
     port
     dialect
     
-4 - Instalar as dependências do projeto digitando no terminal o comando:
+4 - **Instalar as dependências do projeto** digitando no terminal o comando:
 
     yarn
+
+5 - **Remova as depencias de GDB sobressalentes**.
+
+  Se não necessitar do **MySQL**, execute:
+  
+    yarn remove mysql2
+
+  Ou, se não usar o **Postgress**:
+
+    yarn remove pg pg-hstore
+
+6 - No(s) seu(s) GDB(s) que for usar, **crie o(s) banco(s) de dados** para a aplicação e **crie o usuário com as permissões necessárias**;
+
+7 - **Aplique as migrations para criar as tabelas no banco de dados**, no terminal da aplicação digite:
+
+    yarn sequelize db:migrate
+
+  O comando acima assume por padrão: `yarn sequelize db:migrate --env "development"`
     
-5 - Para executar a aplicação utilize:
+  Alternativamente pode-se aplicar as migrations para cada esquema de conexão que necessitar:
+    
+    yarn sequelize db:migrate --env "production"
+    yarn sequelize db:migrate --env "test1"
+    yarn sequelize db:migrate --env "test2"
+    yarn sequelize db:migrate --env "test3"
+
+8 - **Aplique o seed para incluir o usuário administrador** inicial:
+
+    yarn sequelize db:seed:all
+    
+  Use o esquema de conexão `--env` apropriado conforme explicado no passo anterior.
+
+9 - Para **executar a aplicação** utilize:
 
     yarn dev
 
-ou para depurar:
+ou, no caso de depurar:
 
     yarn dev:debug
     
