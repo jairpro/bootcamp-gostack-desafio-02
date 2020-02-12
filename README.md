@@ -25,7 +25,7 @@ Valores:
     - test3
     - production
 
-Testado 2 GBDs diferentes:
+Testado em 2 GBDs diferentes:
 
     1) MySQL sem docker
     2) Postgres com Docker usando container específico
@@ -62,5 +62,5 @@ ou para depurar:
     
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo <a href="/jairpro/bootcamp-gostack-desafio-02/blob/master/LICENSE">LICENSE</a> para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02/blob/master/LICENSE">LICENSE</a> para mais detalhes.
 
