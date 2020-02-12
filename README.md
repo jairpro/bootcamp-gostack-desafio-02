@@ -27,11 +27,11 @@ Possuí 5 configurações de banco de dados alternáveis pela variável de ambie
     
 Valores:
 
-    - development
-    - test1
-    - test2
-    - test3
-    - production
+    - development (conexão loacl padrão no ambiente de desenvolvimento)
+    - test1 (usei para testar o mysql local com xampp) 
+    - test2 (usei para testar o postgres com docker local)
+    - test3 (reservei para testar o mysql com docker local)
+    - production (conterá a conexão escolhida para o deploy da aplicação num servidor da web)
 
 Testado em 2 GBDs diferentes:
 
