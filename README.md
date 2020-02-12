@@ -21,7 +21,7 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 ## ♥ **Extras**
 Usa variáveis de ambiente com Dotenv (arquivo .env);
 
-Possuí 5 configurações de banco de dados alternáveis pela variável de ambiente:
+Possui 5 configurações de banco de dados alternáveis pela variável de ambiente:
     
     NODE_ENV
     
