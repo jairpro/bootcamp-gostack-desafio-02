@@ -105,7 +105,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 
 6 - No(s) seu(s) GDB(s) que for usar, **crie o(s) banco(s) de dados** para a aplicação e **crie o usuário com as permissões necessárias**;
 
-7 - **Aplique as migrations para criar as tabelas no banco de dados**, no terminal da aplicação digite:
+7 - **Aplique as migrations para criar as tabelas no banco de dados**. No terminal da aplicação digite:
 
     yarn sequelize db:migrate
 
