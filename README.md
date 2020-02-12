@@ -69,7 +69,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
     USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite) 
     RECIPIENT_NO_DUPLICATE_NAMES (o mesmo acima para destinatários, mas ainda não foi implementado)
 
- E variáveis de ambiente para os esquemas de conexão ao GDB:
+ Variáveis de ambiente para os esquemas de conexão ao GDB:
 
     NODE_ENV (define o esquema de conexão das variáveis abaixo, equivale ao *** em maiúsculas nas variáveis abaixo:)
 
