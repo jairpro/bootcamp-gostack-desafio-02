@@ -9,7 +9,7 @@ export default async (req, res, next) => {
   const authHeader = req.headers.authorization;
 
   if (!authHeader) {
-    return res.status(401).json({ message: 'Token não fornecido' });
+    return res.status(401).json({ message: 'Token not provided' });
   }
 
   const [, token] = authHeader.split(' ');
@@ -29,6 +29,6 @@ export default async (req, res, next) => {
 
     return next();
   } catch (err) {
-    return res.status(401).json({ message: 'Token inválido' });
+    return res.status(401).json({ message: 'Invalid token' });
   }
 };
