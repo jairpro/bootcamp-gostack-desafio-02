@@ -93,7 +93,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 
     yarn
 
-5 - **Remova as depencias de GDB sobressalentes**.
+5 - **Remova as dependências de GDB sobressalentes**.
 
   Se não necessitar do **MySQL**, execute:
   
