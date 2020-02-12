@@ -99,7 +99,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
   
     yarn remove mysql2
 
-  Ou, se não usar o **Postgress**:
+  Ou, se não usar o **Postgres**:
 
     yarn remove pg pg-hstore
 
