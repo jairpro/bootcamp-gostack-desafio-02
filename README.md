@@ -28,14 +28,14 @@ Possuí 5 configurações de banco de dados alternáveis pela variável de ambie
 Valores:
 
     - development (conexão local padrão no ambiente de desenvolvimento)
-    - test1 (usei para testar o mysql local com xampp) 
-    - test2 (usei para testar o postgres com docker local)
-    - test3 (reservei para testar o mysql com docker local)
+    - test1 (usei para testar o MySQL local com Xampp) 
+    - test2 (usei para testar o Postgres com Docker local)
+    - test3 (reservei para testar o MySQL com Docker local)
     - production (conterá a conexão escolhida para o deploy da aplicação num servidor da web)
 
 Testado em 2 GBDs diferentes:
 
-    1) MySQL sem docker
+    1) MySQL sem Docker
     2) Postgres com Docker usando container específico
 
 Campo "admin" no cadastro de usuários para ter acesso como adminitrador ou simples operador;
