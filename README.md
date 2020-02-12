@@ -47,7 +47,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
         
 - CRUD completo de usuários e destinatários conforme permissões do usuário;
 - Alteração de senhas conforme permissões do usuário;
-- Ativar/remover privilégio de administrador de acordo com o tipo de usuario autenticado;
+- Ativar/remover privilégio de administrador de acordo com o tipo de usuário autenticado;
 
 - Opção para permitir/bloquear repeticões de nomes de usuários pela variável de ambiente:
 
