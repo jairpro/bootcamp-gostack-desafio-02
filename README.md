@@ -71,7 +71,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 
  Variáveis de ambiente para os esquemas de conexão ao GDB:
 
-    NODE_ENV (define o esquema de conexão e o seu valor [em minuscula] equivale ao *** [em maiúscula] das variáveis abaixo)
+    NODE_ENV (define o esquema de conexão e o seu valor [em minúscula] equivale ao *** [em maiúscula] das variáveis abaixo)
 
     DB_***_DIALECT (O GDB usado: 'postgres', 'mysql', etc)
     DB_***_HOST (url do servidor GDB)
