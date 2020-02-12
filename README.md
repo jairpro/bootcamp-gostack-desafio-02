@@ -45,7 +45,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
     Arquivo: utils/Utils.js
     Métódodo: Utils.fixDataToLocaleString()
         
-- CRUD completo de usários e destinatários conforme permissões do usuário
+- CRUD completo de usuários e destinatários conforme permissões do usuário
 - Alteração de senhas
 - Ativar/remover privilégio de administrador de acordo com o tipo de usuario autenticado
 - Opção para permitir/bloquear repeticões de nomes de users pela variável de ambiente:
