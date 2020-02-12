@@ -57,7 +57,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 ## 🚀 **Instalação** 
 1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
 
-2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir as variaveis de ambiente da apliacação:
+2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de variáveis de ambiente a seguir:
 
     SERVER_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
     AUTH_SECRET (segredo da autenticação por algorítmo md5.
@@ -69,7 +69,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 
  Esquemas de conexão ao GDB:
 
-    NODE_ENV (define o esquema de conexão das variáveis abaixo, equivale ao *** em maiúsculas nas variaveis abaixo:)
+    NODE_ENV (define o esquema de conexão das variáveis abaixo, equivale ao *** em maiúsculas nas variáveis abaixo:)
 
     DB_***_DIALECT (O GDB usado: 'postgres', 'mysql', etc)
     DB_***_HOST (url do servidor GDB)
