@@ -19,7 +19,7 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 
 
 ## ♥ **Extras**
-Usa variáveis de ambiente com Dotenv (arquivo .env)
+Usa variáveis de ambiente com Dotenv (arquivo .env);
 
 Possuí 5 configurações de banco de dados alternáveis pela variável de ambiente:
     
@@ -38,17 +38,18 @@ Testado em 2 GBDs diferentes:
     1) MySQL sem docker
     2) Postgres com Docker usando container específico
 
-Campo "admin" no cadastro de usuários para ter acesso como adminitrador ou simples operador.
+Campo "admin" no cadastro de usuários para ter acesso como adminitrador ou simples operador;
 
-Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos cadastros.
+Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos cadastros:
 
     Arquivo: utils/Utils.js
     Métódodo: Utils.fixDataToLocaleString()
         
-- CRUD completo de usuários e destinatários conforme permissões do usuário
-- Alteração de senhas
-- Ativar/remover privilégio de administrador de acordo com o tipo de usuario autenticado
-- Opção para permitir/bloquear repeticões de nomes de users pela variável de ambiente:
+- CRUD completo de usuários e destinatários conforme permissões do usuário;
+- Alteração de senhas conforme permissões do usuário;
+- Ativar/remover privilégio de administrador de acordo com o tipo de usuario autenticado;
+
+- Opção para permitir/bloquear repeticões de nomes de usuários pela variável de ambiente:
 
         USER_NO_DUPLICATE_NAMES = true/false
         
