@@ -57,7 +57,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 ## 🚀 **Instalação** 
 1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
 
-2 - Usando como modole o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir as variaveis de ambiente da apliacação:
+2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir as variaveis de ambiente da apliacação:
 
     SERVER_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
     AUTH_SECRET (segredo da autenticação por algorítmo md5.
