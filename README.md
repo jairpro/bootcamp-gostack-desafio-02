@@ -51,9 +51,14 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 2 - Usando como modole o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir as variaveis de ambiente da apliacação:
 
     SERVER_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
-    AUTH_SECRET (segredo da autenticação por algorítmo md5. Pode-se ober <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>)
+    AUTH_SECRET (segredo da autenticação por algorítmo md5.
+    
+ O md5 pode ser obtido <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>)
+    
     USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite) 
     RECIPIENT_NO_DUPLICATE_NAMES (o mesmo acima para destinatários, mas ainda não foi implementado)
+
+ Esquemas de conexão ao GDB:
 
     NODE_ENV (define o esquema de conexão das variáveis abaixo, equivale ao *** em maiúsculas nas variaveis abaixo:)
 
