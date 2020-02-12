@@ -103,7 +103,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 
     yarn remove pg pg-hstore
 
-6 - No(s) seu(s) GDB(s) que for usar, **crie o(s) banco(s) de dados** para a aplicação e **crie o usuário com as permissões necessárias**;
+6 - Nos seus GDBs que for usar, **crie os bancos de dados, e para cada banco, o respectivo usuário com as permissões de acesso necessárias**;
 
 7 - **Aplique as migrations para criar as tabelas no banco de dados**. No terminal da aplicação digite:
 
