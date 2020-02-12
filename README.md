@@ -63,6 +63,7 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
     AUTH_SECRET (segredo da autenticação por algorítmo md5)
     
  O md5 pode ser obtido <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>;
+ 
  Continuando com as variáveis de ambiente, temos:
     
     USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite) 
