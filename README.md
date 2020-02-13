@@ -43,7 +43,7 @@ Campo "admin" no cadastro de usuários para ter acesso como adminitrador ou simp
 Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos cadastros:
 
     Arquivo: utils/Utils.js
-    Métódodo: Utils.fixDataToLocaleString()
+    Método: Utils.fixDataToLocaleString()
         
 - CRUD completo de usuários e destinatários conforme permissões do usuário;
 - Alteração de senhas conforme permissões do usuário;
