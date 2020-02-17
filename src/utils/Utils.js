@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 class Utils {
   static strZero(num, size) {
     const s = `000${num}`;
@@ -5,22 +7,12 @@ class Utils {
   }
 
   static fixDateToLocaleString(date) {
-    let ls = date;
-    if (typeof date === 'object') {
-      const ymd = date
-        .toLocaleString()
-        .split(' ')[0]
-        .split('-');
-      ymd[1] = Utils.strZero(ymd[1], 2);
-      ymd[2] = Utils.strZero(ymd[2], 2);
-      const isu = date
-        .toLocaleString()
-        .split(' ')[1]
-        .split(':');
-      isu[0] = Utils.strZero(isu[0], 2);
-      ls = `${ymd.join('-')} ${isu.join(':')}`;
+    if (JSON.parse(process.env.TZ_FIX)) {
+      return format(date, process.env.TZ_FORMAT, {
+        tz: process.env.TZ_LOCALE,
+      });
     }
-    return ls;
+    return date;
   }
 }
 

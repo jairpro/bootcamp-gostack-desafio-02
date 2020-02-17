@@ -19,47 +19,23 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 
 
 ## ♥ **Extras**
-Usa variáveis de ambiente com Dotenv (arquivo .env);
 
-Possui 5 configurações de banco de dados alternáveis pela variável de ambiente:
-
-    NODE_ENV
-
-Valores:
-
-    - development (conexão local padrão no ambiente de desenvolvimento)
-    - test1 (usei para testar o MySQL local com Xampp)
-    - test2 (usei para testar o Postgres com Docker local)
-    - test3 (reservei para testar o MySQL com Docker local)
-    - production (conterá a conexão escolhida para o deploy da aplicação num servidor da web)
-
-Testado em 2 GBDs diferentes:
-
-    1) MySQL sem Docker
-    2) Postgres com Docker usando container específico
-
-Campo "admin" no cadastro de usuários para ter acesso como adminitrador ou simples operador;
-
-Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos cadastros:
-
-    Arquivo: utils/Utils.js
-    Método: Utils.fixDataToLocaleString()
-
+- Usa variáveis de ambiente com Dotenv (arquivo .env);
+- Campo "admin" no cadastro de usuários para ter acesso como adminitrador ou simples operador;
 - CRUD completo de usuários e destinatários conforme permissões do usuário;
 - Alteração de senhas conforme permissões do usuário;
 - Ativar/remover privilégio de administrador de acordo com o tipo de usuário autenticado;
-
 - Opção para permitir/bloquear repeticões de nomes de usuários pela variável de ambiente:
 
         USER_NO_DUPLICATE_NAMES = true/false
 
 
 ## 🚀 **Instalação**
-1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
+1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-03">repositório</a> em seu computador;
 
 2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
 
-    SERVER_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
+    APP_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
     AUTH_SECRET (segredo da autenticação por algorítmo md5)
 
  O md5 pode ser obtido <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>;
@@ -71,60 +47,28 @@ Método para corrigir o fuso das datas para os campos createdAt e updatedAt dos 
 
  Variáveis de ambiente para os esquemas de conexão ao GDB:
 
-    NODE_ENV (define o esquema de conexão e o seu valor [em minúscula] equivale ao *** [em maiúscula] das variáveis abaixo)
+    DB_DIALECT (O GDB usado: 'postgres', 'mysql', etc)
+    DB_HOST (url do servidor GDB)
+    DB_PORT (porta de acesso, vazio assume porta padrão conforme o GDB)
+    DB_NAME (nome do banco de dados)
+    DB_USER (nome do usuário do banco de dados)
+    DB_PASS (senha do usuário)
 
-    DB_***_DIALECT (O GDB usado: 'postgres', 'mysql', etc)
-    DB_***_HOST (url do servidor GDB)
-    DB_***_PORT (porta de acesso, vazio assume porta padrão conforme o GDB)
-    DB_***_DATABASE (nome do banco de dados)
-    DB_***_USER (nome do usuário do banco de dados)
-    DB_***_PASSWORD (senha do usuário)
-
-3 - Usando como modelo o arquivo **src/config/config.example.json** criar na mesma pasta um arquivo **config.json** e definir o restante dos campos (semelhantes aos acima) para cada **configuração de conexão ao banco de dados**:
-
-    username
-    password
-    database
-    host
-    port
-    dialect
-
-4 - **Instalar as dependências do projeto** digitando no terminal o comando:
+3 - **Instalar as dependências do projeto** digitando no terminal o comando:
 
     yarn
 
-5 - **Remova as dependências de GDB sobressalentes**.
+4 - Nos seus GDBs que for usar, **crie os bancos de dados, e para cada banco, o respectivo usuário com as permissões de acesso necessárias**;
 
-  Se não necessitar do **MySQL**, execute:
+5 - **Aplique as migrations para criar as tabelas no banco de dados**. No terminal da aplicação digite:
 
-    yarn remove mysql2
+    yarn sequelize db:migrate --config src/config/database.js
 
-  Ou, se não usar o **Postgres**:
+6 - **Aplique o seed para incluir o usuário administrador** inicial:
 
-    yarn remove pg pg-hstore
+    yarn sequelize db:seed:all --config src/config/database.js
 
-6 - Nos seus GDBs que for usar, **crie os bancos de dados, e para cada banco, o respectivo usuário com as permissões de acesso necessárias**;
-
-7 - **Aplique as migrations para criar as tabelas no banco de dados**. No terminal da aplicação digite:
-
-    yarn sequelize db:migrate
-
-  O comando acima assume por padrão: `yarn sequelize db:migrate --env "development"`
-
-  Alternativamente pode-se aplicar as migrations para cada esquema de conexão que necessitar:
-
-    yarn sequelize db:migrate --env "production"
-    yarn sequelize db:migrate --env "test1"
-    yarn sequelize db:migrate --env "test2"
-    yarn sequelize db:migrate --env "test3"
-
-8 - **Aplique o seed para incluir o usuário administrador** inicial:
-
-    yarn sequelize db:seed:all
-
-  Use o esquema de conexão `--env` apropriado conforme explicado no passo anterior.
-
-9 - Para **executar a aplicação** utilize:
+7 - Para **executar a aplicação** utilize:
 
     yarn dev
 
@@ -135,4 +79,3 @@ ou, no caso de depurar:
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02/blob/master/LICENSE">LICENSE</a> para mais detalhes.
-

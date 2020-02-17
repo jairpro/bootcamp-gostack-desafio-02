@@ -10,7 +10,7 @@ import Utils from './utils/Utils';
 const routes = new Router();
 
 routes.get('/', (req, res) => {
-  const agora = Utils.fixDateToLocaleString(new Date().toLocaleString());
+  const agora = Utils.fixDateToLocaleString(new Date());
   res.send(`Olá! agora é ${agora}`);
 });
 
