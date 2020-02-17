@@ -31,7 +31,7 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 
 
 ## 🚀 **Instalação**
-1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-03">repositório</a> em seu computador;
+1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
 
 2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
 
