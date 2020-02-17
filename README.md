@@ -28,10 +28,16 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 - Opção para permitir/bloquear repeticões de nomes de usuários pela variável de ambiente:
 
         USER_NO_DUPLICATE_NAMES = true/false
+        
+- Opção via variável de ambinete para corrigir o fuso horário dos campos de datas nas respostas funcionais de requisições, com formato epecificado:
 
+        TZ_FIX=(true ou =false)
+        TZ_FORMAT=(exemplo: ="yyyy-MM-dd' 'HH:mm:ss")
+        TZ_LOCALE=(exemplo: America/Sao_Paulo)
+        
 
 ## 🚀 **Instalação**
-1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-03">repositório</a> em seu computador;
+1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
 
 2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
 
