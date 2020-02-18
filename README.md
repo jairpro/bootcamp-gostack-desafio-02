@@ -25,40 +25,47 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 - CRUD completo de usuários e destinatários conforme permissões do usuário;
 - Alteração de senhas conforme permissões do usuário;
 - Ativar/remover privilégio de administrador de acordo com o tipo de usuário autenticado;
-- Opção para permitir/bloquear repeticões de nomes de usuários pela variável de ambiente:
+- Customizações extra via variáveis de ambiente (ver logo abaixo em instalação);
 
-        USER_NO_DUPLICATE_NAMES = true/false
-        
-- Opção via variável de ambinete para corrigir o fuso horário dos campos de datas nas respostas funcionais de requisições, com formato epecificado:
-
-        TZ_FIX=(true ou =false)
-        TZ_FORMAT=(exemplo: ="yyyy-MM-dd' 'HH:mm:ss")
-        TZ_LOCALE=(exemplo: America/Sao_Paulo)
-        
 
 ## 🚀 **Instalação**
 1 - Clonar o <a href="https://github.com/jairpro/bootcamp-gostack-desafio-02">repositório</a> em seu computador;
 
-2 - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
+2 - Definir as variáveis de ambiente:
+
+  - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
 
     APP_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
+
     AUTH_SECRET (segredo da autenticação por algorítmo md5)
 
- O md5 pode ser obtido <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>;
+    O md5 pode ser obtido <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>;
 
- Continuando com as variáveis de ambiente, temos:
+  - Variáveis de ambiente necessárias para os esquemas de conexão ao GDB:
 
-    USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite)
-    RECIPIENT_NO_DUPLICATE_NAMES (o mesmo acima para destinatários, mas ainda não foi implementado)
+        DB_DIALECT (O GDB usado: 'postgres', 'mysql', etc)
+        DB_HOST (url do servidor GDB)
+        DB_PORT (porta de acesso, vazio assume porta padrão conforme o GDB)
+        DB_NAME (nome do banco de dados)
+        DB_USER (nome do usuário do banco de dados)
+        DB_PASS (senha do usuário)
 
- Variáveis de ambiente para os esquemas de conexão ao GDB:
+  - Variáveis de ambiente opcionais para permitir ou bloquear repeticões de nomes de:
 
-    DB_DIALECT (O GDB usado: 'postgres', 'mysql', etc)
-    DB_HOST (url do servidor GDB)
-    DB_PORT (porta de acesso, vazio assume porta padrão conforme o GDB)
-    DB_NAME (nome do banco de dados)
-    DB_USER (nome do usuário do banco de dados)
-    DB_PASS (senha do usuário)
+    Usuários:
+
+      USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite)
+
+    Destinatários:
+
+      RECIPIENT_NO_DUPLICATE_NAMES (ainda não foi implementado)
+
+  - Variável de ambiente opcional para corrigir o fuso horário dos campos data nas respostas funcionais de requisições, com formato epecificado:
+
+        TZ_FIX=(true ou =false)
+        TZ_FORMAT=(exemplo: ="yyyy-MM-dd' 'HH:mm:ss")
+        TZ_LOCALE=(exemplo: America/Sao_Paulo)
+
 
 3 - **Instalar as dependências do projeto** digitando no terminal o comando:
 
@@ -68,11 +75,11 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 
 5 - **Aplique as migrations para criar as tabelas no banco de dados**. No terminal da aplicação digite:
 
-    yarn sequelize db:migrate --config src/config/database.js
+    yarn sequelize db:migrate
 
 6 - **Aplique o seed para incluir o usuário administrador** inicial:
 
-    yarn sequelize db:seed:all --config src/config/database.js
+    yarn sequelize db:seed:all
 
 7 - Para **executar a aplicação** utilize:
 
