@@ -15,7 +15,7 @@
 ## 🚀 **Sobre**
 Aplicação Node.js com cadastro e autenticação de usuários e cadastro de destinatários.
 
-Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/blob/3633608606b6134c1775a8d37daa1ea25b2eb3d6/README.md
+Desafio proposto em: <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-02/blob/3633608606b6134c1775a8d37daa1ea25b2eb3d6/README.md">github.com/Rocketseat/bootcamp-gostack-desafio-02</a> 
 
 
 ## ♥ **Extras**
@@ -35,9 +35,9 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 
   - Usando como modelo o arquivo **.env.example** criar na mesma pasta um arquivo **.env** e definir a série de **variáveis de ambiente** a seguir:
 
-    APP_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
+        APP_PORT (porta da aplicação sugestão 3333 ou somar 1 até obter uma porta livre)
 
-    AUTH_SECRET (segredo da autenticação por algorítmo md5)
+        AUTH_SECRET (segredo da autenticação por algorítmo md5)
 
     O md5 pode ser obtido <a href="https://www.md5online.org/">aqui</a> ou <a href="https://www.md5hashgenerator.com/">aqui</a>;
 
@@ -54,11 +54,11 @@ Desafio proposto em: https://github.com/Rocketseat/bootcamp-gostack-desafio-02/b
 
     Usuários:
 
-      USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite)
+        USER_NO_DUPLICATE_NAMES (true = não permite nomes duplicados de usuários, false = permite)
 
     Destinatários:
 
-      RECIPIENT_NO_DUPLICATE_NAMES (ainda não foi implementado)
+        RECIPIENT_NO_DUPLICATE_NAMES (ainda não foi implementado)
 
   - Variável de ambiente opcional para corrigir o fuso horário dos campos data nas respostas funcionais de requisições, com formato epecificado:
 
